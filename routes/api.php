@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Api\AdminController;
+use App\Http\Controllers\Api\UserAuthController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -14,6 +16,24 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+Route::post('/user/register', [UserAuthController::class, 'register']);
+
+Route::post('/user/login', [UserAuthController::class, 'login']);
+
+
+Route::group(['middleware' => ['auth:users']], function () {
+    Route::post('/user/signout', [UserAuthController::class, 'signout']);
+    Route::post('/user/updateProfile', [UserAuthController::class, 'updateProfile']);
+    Route::post('/user/editPassword', [UserAuthController::class, 'editPassword']);
+});
+
+
+Route::post('/admin/register', [AdminController::class, 'register']);
+
+Route::post('/admin/login', [AdminController::class, 'login']);
+
+Route::group(['middleware' => ['auth:admins']], function () {
+    Route::post('/admin/logout', [AdminController::class, 'logout']);
+//    Route::post('/user/updateProfile', [AdminController::class, 'updateProfile']);
+//    Route::post('/user/editPassword', [AdminController::class, 'editPassword']);
 });

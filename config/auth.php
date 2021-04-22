@@ -42,9 +42,22 @@ return [
         ],
 
         'api' => [
-            'driver' => 'token',
+            'driver' => 'passport',
             'provider' => 'users',
-            'hash' => false,
+        ],
+        'users' => [
+            'driver' => 'passport',
+            'provider' => 'users',
+        ],
+
+        'companies' => [
+            'driver' => 'passport',
+            'provider' => 'companies',
+        ],
+
+        'admins' => [
+            'driver' => 'passport',
+            'provider' => 'admins',
         ],
     ],
 
@@ -69,6 +82,14 @@ return [
         'users' => [
             'driver' => 'eloquent',
             'model' => App\Models\User::class,
+        ],
+        'companies' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Company::class,
+        ],
+        'admins' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Admin::class,
         ],
 
         // 'users' => [
