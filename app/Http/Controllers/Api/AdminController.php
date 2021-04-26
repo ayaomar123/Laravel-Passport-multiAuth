@@ -47,6 +47,7 @@ class AdminController extends Controller
                 'msg' => "Cardetalsd doesn't match",
             ],401);
         }
+
         return response()->json([
             'msg' => "login Successfully",
             'admin' => AdminResource::collection(Admin::query()->where('id',$admin->id)->get()),
@@ -65,7 +66,9 @@ class AdminController extends Controller
 
     public function me(){
 
-        dd(auth()->user()->name);
+        return response()->json([
+           'data' => AdminResource::collection(Admin::query()->where('id',auth()->user()->id)->get())
+        ]);
     }
 
 }

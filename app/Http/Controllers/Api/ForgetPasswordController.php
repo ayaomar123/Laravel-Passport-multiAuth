@@ -36,14 +36,7 @@ class ForgetPasswordController extends Controller
 
         $user = User::where('email',$request->email)->first();
 //        dd($user);
-        $requestData = \request()->all();
-        if(\request()->password == \request()->password_confirmation){
-            $requestData['password'] = bcrypt($requestData['password']);
-//            dd($requestData);
-        }
-        else{
-            unset($requestData['password']);
-        }
+
         $user->password = bcrypt(\request()->password);
         $user->save();
         return response()->json([

@@ -46,7 +46,6 @@ class UserAuthController extends Controller
         }
 
         $token = auth()->user()->createToken('API Token')->accessToken;
-
         return response([
             'user' => UserResource::collection(User::query()->where('id',auth()->user()->id)->get()),
             'token' => $token
