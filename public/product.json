@@ -1,0 +1,131 @@
+{
+    "products": [
+        {
+            "id": 4,
+            "name": "pains",
+            "price": 700,
+            "product_type": "Pains",
+            "created_at": "2021-02-01",
+            "updated_at": "2021-02-01",
+            "options": [
+                {
+                    "id": 1,
+                    "title": "red",
+                    "price": 53.6,
+                    "created_at": "2021-02-01",
+                    "updated_at": "2021-02-01"
+                },
+                {
+                    "id": 1,
+                    "title": "yellow",
+                    "price": 40.6,
+                    "created_at": "2021-02-01",
+                    "updated_at": "2021-02-01"
+                },
+                {
+                    "id": 1,
+                    "title": "blue",
+                    "price": 300,
+                    "created_at": "2021-02-01",
+                    "updated_at": "2021-02-01"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "name": "lamp",
+            "price": 800,
+            "product_type": "Lamps",
+            "created_at": "2021-02-01",
+            "updated_at": "2021-02-01",
+            "options": [
+                {
+                    "id": 1,
+                    "title": "red",
+                    "price": 53.6,
+                    "created_at": "2021-02-01",
+                    "updated_at": "2021-02-01"
+                },
+                {
+                    "id": 1,
+                    "title": "yellow",
+                    "price": 40.6,
+                    "created_at": "2021-02-01",
+                    "updated_at": "2021-02-01"
+                },
+                {
+                    "id": 1,
+                    "title": "blue",
+                    "price": 300,
+                    "created_at": "2021-02-01",
+                    "updated_at": "2021-02-01"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "name": "wallet",
+            "price": 900,
+            "product_type": "Wallet",
+            "created_at": "2021-02-01",
+            "updated_at": "2021-02-01",
+            "options": [
+                {
+                    "id": 1,
+                    "title": "red",
+                    "price": 53.6,
+                    "created_at": "2021-02-01",
+                    "updated_at": "2021-02-01"
+                },
+                {
+                    "id": 1,
+                    "title": "yellow",
+                    "price": 40.6,
+                    "created_at": "2021-02-01",
+                    "updated_at": "2021-02-01"
+                },
+                {
+                    "id": 1,
+                    "title": "blue",
+                    "price": 300,
+                    "created_at": "2021-02-01",
+                    "updated_at": "2021-02-01"
+                }
+            ]
+        },
+        {
+            "id": 1,
+            "name": "pains",
+            "price": 700,
+            "product_type": "Pains",
+            "created_at": "2021-02-01",
+            "updated_at": "2021-02-01",
+            "options": [
+                {
+                    "id": 1,
+                    "title": "red",
+                    "price": 53.6,
+                    "created_at": "2021-02-01",
+                    "updated_at": "2021-02-01"
+                },
+                {
+                    "id": 1,
+                    "title": "yellow",
+                    "price": 40.6,
+                    "created_at": "2021-02-01",
+                    "updated_at": "2021-02-01"
+                },
+                {
+                    "id": 1,
+                    "title": "blue",
+                    "price": 300,
+                    "created_at": "2021-02-01",
+                    "updated_at": "2021-02-01"
+                }
+            ]
+        }
+
+
+    ]
+}
+

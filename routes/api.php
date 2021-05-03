@@ -3,6 +3,7 @@
 use App\Http\Controllers\Api\AdminController;
 use App\Http\Controllers\Api\ForgetPasswordController;
 use App\Http\Controllers\Api\UserAuthController;
+use App\Http\Controllers\ProductController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -45,3 +46,8 @@ Route::post('/forgot', [ForgetPasswordController::class, 'forgot']);
 Route::post('/password/reset', [ForgetPasswordController::class, 'reset'])->name('password.reset');
 
 
+Route::get('/getProduct', [ProductController::class, 'getProduct']);
+Route::get('/getPrice', [ProductController::class, 'getPrice']);
+Route::get('/getFilter', [ProductController::class, 'getFilter']);
+Route::get('/walletAndPainsPrice', [ProductController::class, 'walletAndPainsPrice']);
+Route::get('/walletAndPainsPriceCollection', [ProductController::class, 'walletAndPainsPriceCollection']);
