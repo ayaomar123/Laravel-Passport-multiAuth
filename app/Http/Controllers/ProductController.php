@@ -66,16 +66,14 @@ class ProductController extends Controller
                 return collect($item2)->search('Wallet') || collect($item2)->search('Pains');
             });
         });
-
-        $collect =  $collections->map(function ($data) {
-            return collect($data)->map(function ($d){
-                return (collect($d['options'])->sum('price'));
+        $collector =  $collections->map(function ($data) {
+            return collect($data)->map(function ($datum){
+                return (collect($datum['options'])->sum('price'));
             });
 
         });
-
-        return collect($collect)->map(function ($zeft){
-            return collect($zeft)->sum();
+        return $collector->map(function ($collect){
+            return collect($collect)->sum();
         });
     }
 }
